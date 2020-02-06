@@ -1,0 +1,7 @@
+backends:
+- prefix: '[^/]*/postgres'
+  flow_id: postgres
+- prefix: '[^/]*/mariadb'
+  flow_id: mariadb
+- prefix: '[^/]*/mongodb'
+  flow_id: mongodb

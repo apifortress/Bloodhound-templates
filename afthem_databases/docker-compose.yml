@@ -1,0 +1,86 @@
+version: '2'
+services:
+   afthem:
+      image: apifortress/afthem:latest
+      container_name: afthem
+      networks:
+      - default
+      volumes:
+      - ./etc:/opt/afthem/etc
+      - ./docker_log:/opt/afthem/log
+      - ./modules:/opt/afthem/modules
+      - ./mocks:/opt/afthem/mocks
+      ports:
+      - 8080:8080/tcp
+      environment:
+      - memorySettings=-Xms1024m -Xmx1024m
+   postgres:
+      image: postgres:9.5.5
+      container_name: postgres
+      networks:
+         default:
+            aliases:
+            - postgres
+      hostname: postgres
+      environment:
+         POSTGRES_PASSSWORD: jk5112
+         POSTGRES_USER: apipulse
+      domainname: postgres
+      ports:
+      - 5432:5432/tcp
+      volumes:
+      - ./data/postgresql_db:/var/lib/postgresql/data
+   mariadb:
+      image: mariadb
+      container_name: mariadb
+      environment:
+         MYSQL_ROOT_PASSWORD: jk5112
+         MYSQL_DATABASE: apipulse
+         MYSQL_USER: apipulse
+         MYSQL_PASSWORD: jk5112
+      networks:
+         default:
+            aliases:
+            - mariadb
+      hostname: mariadb
+      domainname: mariadb
+      ports:
+      - 3306:3306
+      volumes:
+      - ./data/mariadb_db:/var/lib/mysql
+   adminer:
+      image: adminer
+      container_name: adminer
+      depends_on:
+      - mariadb
+      - postgres
+      ports:
+      - 8081:8080
+   mongodb:
+      image: mongo:3.2
+      container_name: mongodb
+      hostname: mongo.apifortress
+      networks:
+        default:
+          aliases:
+          - mongo
+      domainname: mongo
+      hostname: mongo
+      command:
+      - --storageEngine
+      - wiredTiger
+      ports:
+      - 27017:27017
+      volumes:
+      - ./data/mongo:/data/db
+   mongoclient:
+     image: mongoclient/mongoclient
+     container_name: mongoclient
+     depends_on: 
+     - mongodb
+     environment:
+       MONGO_URL: 'mongodb://mongo:27017/mongoclient'
+     ports:
+     - 8082:3000
+
+          

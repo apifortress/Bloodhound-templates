@@ -1,0 +1,10 @@
+proxy/request:
+  next: proxy/upstream_jdbc_mariadb
+
+proxy/upstream_jdbc_mariadb:
+  next: proxy/send_back
+  config:
+    url: jdbc:mysql://mariadb:3306/apipulse?user=apipulse&password=jk5112
+    driver: org.mariadb.jdbc.Driver
+
+proxy/send_back: {}

@@ -1,0 +1,10 @@
+proxy/request:
+  next: proxy/upstream_jdbc_postgres
+
+proxy/upstream_jdbc_postgres:
+  next: proxy/send_back
+  config:
+    url: jdbc:postgresql://postgres:5432/apipulse?user=apipulse&password=jk5112
+    driver: org.postgresql.Driver
+
+proxy/send_back: {}

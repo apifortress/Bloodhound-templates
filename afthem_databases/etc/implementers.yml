@@ -1,0 +1,34 @@
+implementers:
+# PROXY
+  - id: request
+    class: com.apifortress.afthem.actors.proxy.RequestActor
+    type: proxy
+  - id: upstream_http
+    class: com.apifortress.afthem.actors.proxy.UpstreamHttpActor
+    type: proxy
+  - id: send_back
+    class: com.apifortress.afthem.actors.proxy.SendBackActor
+    type: proxy
+  - id: upstream_jdbc_postgres
+    class: com.apifortress.afthem.modules.jdbc.actors.proxy.UpstreamJdbcActor
+    type: proxy
+    thread_pool: jdbc
+  - id: upstream_jdbc_mariadb
+    class: com.apifortress.afthem.modules.jdbc.actors.proxy.UpstreamJdbcActor
+    type: proxy
+    thread_pool: jdbc
+  - id: upstream_mongo
+    class: com.apifortress.afthem.modules.mongodb.actors.proxy.UpstreamMongoActor
+    type: proxy
+    thread_pool: jdbc
+
+
+thread_pools:
+  default:
+    min: 1
+    max: 2
+    factor: 1
+  jdbc:
+    min: 1
+    max: 2
+    factor: 1

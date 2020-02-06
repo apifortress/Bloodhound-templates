@@ -1,0 +1,12 @@
+proxy/request:
+  next: proxy/upstream_mongo
+
+proxy/upstream_mongo:
+  next: proxy/send_back
+  config:
+    uri: mongodb://mongo:27017
+    database: apipulse
+    collection: test
+    max_documents: 100
+
+proxy/send_back: {}
