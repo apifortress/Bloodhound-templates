@@ -2,6 +2,8 @@
 
 Extended example setup demonstrating how to use databases as upstreams for AFtheM.
 
+Launch the full package by issuing `docker-compose up`
+
 ## Databases
 
 The setup installs 3 different databases using Docker, to simplify the understanding and evaluation of the upstreams.
@@ -79,3 +81,8 @@ curl -H 'content-type:text/plain' -d 'select * from people' localhost:8080/maria
 curl -H 'content-type:application/json' -d '{}' localhost:8080/mongodb
 curl -H 'content-type:application/json' -H 'x-op:insert' -d '{"foo":"bar"}' localhost:8080/mongodb
 ```
+
+## Further reading
+
+* Read more on [the configuration options for the JDBC module](https://github.com/apifortress/afthem-modules/tree/master/jdbc).
+* Read more on [the configuration options for the MongoDB module](https://github.com/apifortress/afthem-modules/tree/master/mongodb).
