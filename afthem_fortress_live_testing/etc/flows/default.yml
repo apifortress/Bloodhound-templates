@@ -1,0 +1,25 @@
+proxy/request:
+  next: transformer/endpoint_identifier
+
+transformer/endpoint_identifier:
+  next: proxy/upstream_http
+  config:
+    regex:
+      product_api:
+        url: .*/product
+        method: GET
+
+proxy/upstream_http:
+  next: proxy/send_back
+
+proxy/send_back:
+  sidecars:
+  - sidecar/fortress_live_testing
+
+
+sidecar/fortress_live_testing:
+  config:
+    url: '"http://requestbin:8000/bucket/"+#msg.request().callId()+"/run"'
+    params:
+      param1: value1
+      param2: value2

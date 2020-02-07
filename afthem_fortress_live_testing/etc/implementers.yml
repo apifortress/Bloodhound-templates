@@ -1,0 +1,32 @@
+implementers:
+# PROXY
+  - id: request
+    class: com.apifortress.afthem.actors.proxy.RequestActor
+    type: proxy
+  - id: upstream_http
+    class: com.apifortress.afthem.actors.proxy.UpstreamHttpActor
+    type: proxy
+  - id: send_back
+    class: com.apifortress.afthem.actors.proxy.SendBackActor
+    type: proxy
+
+# TRANSFORMERS
+  - id: endpoint_identifier
+    class: com.apifortress.afthem.actors.transformers.EndpointIdentifierActor
+    type: transformer
+
+# SIDECAR
+  - id: fortress_live_testing
+    class: com.apifortress.afthem.modules.fortressforwarders.actors.sidecars.serializers.FortressLiveTestingActor
+    type: sidecar
+    thread_pool: side
+
+thread_pools:
+  default:
+    min: 1
+    max: 2
+    factor: 1
+  side:
+    min: 1
+    max: 2
+    factor: 1

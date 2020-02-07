@@ -1,0 +1,4 @@
+backends:
+- prefix: '[^/]*/demo'
+  upstream: 'http://demoapi.apifortress.com/api'
+  flow_id: default
