@@ -1,0 +1,17 @@
+proxy/request:
+  next: proxy/upstream_http
+
+proxy/upstream_http:
+  next: proxy/send_back
+
+proxy/send_back:
+  sidecars:
+  - sidecar/fortress_forwarder
+
+
+sidecar/fortress_forwarder:
+  config:
+    url: http://requestbin:8000/bucket
+    headers:
+      x-api-key: ABC
+      x-secret: 'ABC123'
