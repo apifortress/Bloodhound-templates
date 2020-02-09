@@ -1,0 +1,31 @@
+proxy/request:
+  next: filter/api_key
+  sidecars:
+    - sidecar/access_logger
+
+filter/api_key:
+  next: filter/authorization
+  config:
+    filename: etc/api_keys.yml
+    in: query
+    name: key
+  sidecars:
+    - sidecar/access_logger
+
+filter/authorization:
+  next: proxy/upstream_http
+  config:
+    filename: etc/htpasswd.txt
+  sidecars:
+    - sidecar/access_logger
+
+proxy/upstream_http:
+  next: proxy/send_back
+  sidecars:
+    - sidecar/access_logger
+
+proxy/send_back:
+  config: {}
+
+sidecar/access_logger:
+  config: {}

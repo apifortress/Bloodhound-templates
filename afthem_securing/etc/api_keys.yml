@@ -1,0 +1,7 @@
+api_keys:
+- api_key: ABC123
+  app_id: Application One
+  enabled: true
+- api_key: DEF456
+  app_id: Application Two
+  enabled: true

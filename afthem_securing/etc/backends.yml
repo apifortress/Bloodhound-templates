@@ -1,0 +1,4 @@
+backends:
+- prefix: '[^/]*/relay'
+  upstream: 'https://httpbin.org/get'
+  flow_id: default
