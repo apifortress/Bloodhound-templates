@@ -11,11 +11,13 @@ In the default settings, AFtheM will proxy a demo API.
 
 1. Start the full package by issuing `docker-compose up`
 
-2. Execute the following request: `curl -H 'key:ABC123' 127.0.0.1:8080/demo/retail/product`
+2. Access `localhost:8000/bucket?inspect` with your browser to create the bucket
 
-3. The output of the proxied API should appear on your screen
+3. Execute the following request: `curl -H 'key:ABC123' 127.0.0.1:8080/demo/retail/product`
 
-4. Access `localhost:8000/bucket?inspect` with your browser and notice the forwarded API conversation
+4. The output of the proxied API should appear on your screen
+
+5. Reload `localhost:8000/bucket?inspect` with your browser and notice the forwarded API conversation
 
 ## Description
 
