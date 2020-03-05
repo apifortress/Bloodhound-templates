@@ -1,0 +1,17 @@
+implementers:
+# PROXY
+  - id: request
+    class: com.apifortress.afthem.actors.proxy.RequestActor
+    type: proxy
+  - id: send_back
+    class: com.apifortress.afthem.actors.proxy.SendBackActor
+    type: proxy
+  - id: upstream_hazelcast
+    class: com.apifortress.afthem.modules.hazelcast.actors.proxy.UpstreamHazelcastActor
+    type: proxy
+
+thread_pools:
+  default:
+    min: 1
+    max: 2
+    factor: 1

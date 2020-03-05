@@ -1,0 +1,9 @@
+proxy/request:
+  next: proxy/upstream_hazelcast
+
+proxy/upstream_hazelcast:
+  next: proxy/send_back
+  config:
+    remote_id: bananas
+
+proxy/send_back: {}

@@ -1,0 +1,26 @@
+version: '2'
+services:
+   afthem-server:
+      image: apifortress/afthem:latest
+      container_name: afthem_server
+      networks:
+        default:
+            aliases:
+            - afthem_server
+      volumes:
+      - ./etc_server:/opt/afthem/etc
+      - ./server_docker_log:/opt/afthem/log
+      ports:
+      - 8080:8080/tcp
+      environment:
+      - memorySettings=-Xms1024m -Xmx1024m
+   afthem-client:
+      image: apifortress/afthem:latest
+      container_name: afthem_client
+      networks:
+      - default
+      volumes:
+      - ./etc_client:/opt/afthem/etc
+      - ./client_docker_log:/opt/afthem/log
+      environment:
+      - memorySettings=-Xms1024m -Xmx1024m

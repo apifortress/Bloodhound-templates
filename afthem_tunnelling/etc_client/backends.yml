@@ -1,0 +1,5 @@
+backends:
+# This will respond to any domain due to the regex
+- prefix: '[^/]*/'
+  upstream: 'https://postman-echo.com/'
+  flow_id: default
