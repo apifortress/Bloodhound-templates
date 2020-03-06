@@ -1,0 +1,19 @@
+version: '2'
+services:
+   afthem:
+      image: apifortress/afthem:latest
+      container_name: afthem
+      volumes:
+      - ./etc:/opt/afthem/etc
+      - ./docker_log:/opt/afthem/log
+      environment:
+      - memorySettings=-Xms1024m -Xmx1024m
+   tinyproxy:
+      image: dannydirect/tinyproxy:latest
+      links:
+      - afthem:postman-echo.com
+      volumes:
+      - ./tinyproxy:/etc/tinyproxy
+      ports:
+      - 3128:8888/tcp
+      command: ANY

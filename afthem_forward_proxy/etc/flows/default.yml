@@ -1,0 +1,13 @@
+proxy/request:
+  next: proxy/upstream_http
+
+proxy/upstream_http:
+  next: proxy/send_back
+
+proxy/send_back:
+  sidecars:
+    - sidecar/file_serializer
+
+sidecar/file_serializer:
+  config:
+    filename: log/serialized.txt
