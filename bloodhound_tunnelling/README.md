@@ -32,4 +32,4 @@ To update the configuration, proceed as follows:
 ## Important
 
 This is just an example and it's **not secured** as we decided to keep the configuration as minimal as possible. This mode may expose sensitive
-information. We advise you to read the [Official module documentation](https://github.com/apifortress/afthem-modules/blob/master/hazelcast/README.md) and the [HazelCast XML configuration guide](https://docs.hazelcast.org/docs/3.0/manual/html/ch12.html).
+information. We advise you to read the [Official module documentation](https://github.com/apifortress/bloodhound-modules/blob/master/hazelcast/README.md) and the [HazelCast XML configuration guide](https://docs.hazelcast.org/docs/3.0/manual/html/ch12.html).

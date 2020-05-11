@@ -2,7 +2,7 @@
 
 The Fortress Live Testing serializer will forward the response body of an API conversation, together with extra parameters.
 This format is mostly used by the API Fortress product line for live testing, but could be used in other contexts as well.
-More information about this module can be found on [GitHub](https://github.com/apifortress/afthem-modules/tree/master/fortress-forwarder).
+More information about this module can be found on [GitHub](https://github.com/apifortress/bloodhound-modules/tree/master/fortress-forwarder).
 
 ## Usage
 
@@ -33,7 +33,7 @@ regex:
 ```
 
 Which means: *apply the `product_api` label whenever the URL ends with `product` and the method is `GET`*.
-The `endpoint_identifier` actor is described on [GitHub](https://github.com/apifortress/afthem/blob/master/doc/07_advanced_actors.md).
+The `endpoint_identifier` actor is described on [GitHub](https://github.com/apifortress/bloodhound/blob/master/doc/07_advanced_actors.md).
 
 The label is then used in by the `fortress_live_testing` module:
 

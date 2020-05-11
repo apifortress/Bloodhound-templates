@@ -84,5 +84,5 @@ curl -H 'content-type:application/json' -H 'x-op:insert' -d '{"foo":"bar"}' loca
 
 ## Further reading
 
-* Read more on [the configuration options for the JDBC module](https://github.com/apifortress/afthem-modules/tree/master/jdbc).
-* Read more on [the configuration options for the MongoDB module](https://github.com/apifortress/afthem-modules/tree/master/mongodb).
+* Read more on [the configuration options for the JDBC module](https://github.com/apifortress/bloodhound-modules/tree/master/jdbc).
+* Read more on [the configuration options for the MongoDB module](https://github.com/apifortress/bloodhound-modules/tree/master/mongodb).

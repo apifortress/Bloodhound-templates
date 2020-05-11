@@ -1,7 +1,7 @@
 # Bloodhound Fortress Forwarder Example
 
 One of the main reason for the existence of Bloodhound is providing a good way to forward API conversations to other agents.
-This example demonstrantes how this happens using the FortressForwarder module that can be found on [GitHub](https://github.com/apifortress/afthem-modules/tree/master/fortress-forwarder).
+This example demonstrantes how this happens using the FortressForwarder module that can be found on [GitHub](https://github.com/apifortress/bloodhound-modules/tree/master/fortress-forwarder).
 
 While the Forwarder has been specifically designed to output a format that is compatible with [API Fortress](https://apifortress.com),
 it can really be used with any system.
