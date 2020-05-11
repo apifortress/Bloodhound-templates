@@ -1,6 +1,6 @@
-# AFtheM Database examples
+# Bloodhound Database examples
 
-Extended example setup demonstrating how to use databases as upstreams for AFtheM.
+Extended example setup demonstrating how to use databases as upstreams for Bloodhound.
 
 Launch the full package by issuing `docker-compose up`
 
@@ -61,7 +61,7 @@ For MongoDB, right click on "collections", add a new collection named "test". Se
 In the main area of the screen, switch operation from "find" to "insertMany". Open mongodb.json in a text editor, copy the content and
 paste it into the "docs" text area. Click execute.
 
-## Querying with AFtheM
+## Querying with Bloodhound
 
 ### Sample query for the PostgreSQL flow
 

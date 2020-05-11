@@ -1,4 +1,4 @@
-# AFtheM - Securing
+# Bloodhound - Securing
 
 In this example we show a complete example on how to add basic security to an API, by applying both an API key filtering system, and a basic authentication actor.
 
@@ -6,7 +6,7 @@ More information about the actors can be found in the [Advanced Actors documenta
 
 ## Usage
 
-1. Start AFtheM by issuing `docker-compose up`
+1. Start Bloodhound by issuing `docker-compose up`
 
 2. Execute the following request: `curl -H 'accept: application/json' http://afthem:12345@127.0.0.1:8080/relay?key=ABC123`
 

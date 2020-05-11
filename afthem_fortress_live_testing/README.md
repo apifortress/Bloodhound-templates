@@ -1,4 +1,4 @@
-# AFtheM Fortress Live Testing Example
+# Bloodhound Fortress Live Testing Example
 
 The Fortress Live Testing serializer will forward the response body of an API conversation, together with extra parameters.
 This format is mostly used by the API Fortress product line for live testing, but could be used in other contexts as well.
@@ -6,8 +6,8 @@ More information about this module can be found on [GitHub](https://github.com/a
 
 ## Usage
 
-The `docker-compose` comes with AFtheM and **RequestBin** to allow you to appreciate the forwarding act.
-In the default settings, AFtheM will proxy a demo API.
+The `docker-compose` comes with Bloodhound and **RequestBin** to allow you to appreciate the forwarding act.
+In the default settings, Bloodhound will proxy a demo API.
 
 1. Start the full package by issuing `docker-compose up`
 

@@ -1,6 +1,6 @@
-# AFtheM Fortress Forwarder Example
+# Bloodhound Fortress Forwarder Example
 
-One of the main reason for the existence of AFtheM is providing a good way to forward API conversations to other agents.
+One of the main reason for the existence of Bloodhound is providing a good way to forward API conversations to other agents.
 This example demonstrantes how this happens using the FortressForwarder module that can be found on [GitHub](https://github.com/apifortress/afthem-modules/tree/master/fortress-forwarder).
 
 While the Forwarder has been specifically designed to output a format that is compatible with [API Fortress](https://apifortress.com),
@@ -8,8 +8,8 @@ it can really be used with any system.
 
 ## Usage
 
-The `docker-compose` comes with AFtheM and **RequestBin** to allow you to appreciate the forwarding act.
-In the default settings, AFtheM will proxy a demo API.
+The `docker-compose` comes with Bloodhound and **RequestBin** to allow you to appreciate the forwarding act.
+In the default settings, Bloodhound will proxy a demo API.
 
 1. Start the full package by issuing `docker-compose up`
 

@@ -1,18 +1,18 @@
-# AFtheM - Tunnelling
+# Bloodhound - Tunnelling
 
-This is an unusual application of AFtheM. The idea is to create a tunnel between two AFtheM instances, using [HazelCast](https://hazelcast.org/).
-The *afthem-server* will await for an *afthem-client* to permanently connect to it. HTTP requests will be performed to the server which, instead
-of executing them, it will foward them to the *afthem-client*. The *afthem-client* will actually execute the HTTP request and send the response
-back to *afthem-server*.
+This is an unusual application of Bloodhound. The idea is to create a tunnel between two Bloodhound instances, using [HazelCast](https://hazelcast.org/).
+The *bloodhound-server* will await for an *bloodhound-client* to permanently connect to it. HTTP requests will be performed to the server which, instead
+of executing them, it will foward them to the *bloodhound-client*. The *bloodhound-client* will actually execute the HTTP request and send the response
+back to *bloodhound-server*.
 
-By executing this paradigm, a user capable of performing HTTP requests to an *afthem-server* will be able to access the infrastructure where
-*afthem-client* is deployed, regardless of any inbound firewall rules the environment may have, assuming no strict outbound rules are applied.
+By executing this paradigm, a user capable of performing HTTP requests to an *bloodhound-server* will be able to access the infrastructure where
+*bloodhound-client* is deployed, regardless of any inbound firewall rules the environment may have, assuming no strict outbound rules are applied.
 
 ## Usage
 
-1. Run AFtheM server by issuing `sudo docker-compose up -d afthem-server`
+1. Run Bloodhound server by issuing `sudo docker-compose up -d afthem-server`
 
-2. Run AFtheM client by issuing `sudo docker-compose up -d afthem-client`
+2. Run Bloodhound client by issuing `sudo docker-compose up -d afthem-client`
 
 ## Tweaking
 
