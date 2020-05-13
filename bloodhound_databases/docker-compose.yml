@@ -1,8 +1,8 @@
 version: '2'
 services:
    afthem:
-      image: apifortress/afthem:latest
-      container_name: afthem
+      image: apifortress/bloodhound:latest
+      container_name: bloodhound
       networks:
       - default
       volumes:

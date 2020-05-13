@@ -1,8 +1,8 @@
 version: '2'
 services:
    afthem-server:
-      image: apifortress/afthem:latest
-      container_name: afthem_server
+      image: apifortress/bloodhound:latest
+      container_name: bloodhound_server
       networks:
         default:
             aliases:
@@ -15,8 +15,8 @@ services:
       environment:
       - memorySettings=-Xms1024m -Xmx1024m
    afthem-client:
-      image: apifortress/afthem:latest
-      container_name: afthem_client
+      image: apifortress/bloodhound:latest
+      container_name: bloodhound_client
       networks:
       - default
       volumes:
