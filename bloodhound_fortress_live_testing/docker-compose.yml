@@ -6,8 +6,8 @@ services:
       networks:
       - default
       volumes:
-      - ./etc:/opt/afthem/etc
-      - ./docker_log:/opt/afthem/log
+      - ./etc:/opt/bloodhound/etc
+      - ./docker_log:/opt/bloodhound/log
       ports:
       - 8080:8080/tcp
       environment:

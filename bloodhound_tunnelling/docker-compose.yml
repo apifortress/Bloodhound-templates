@@ -8,8 +8,8 @@ services:
             aliases:
             - afthem_server
       volumes:
-      - ./etc_server:/opt/afthem/etc
-      - ./server_docker_log:/opt/afthem/log
+      - ./etc_server:/opt/bloodhound/etc
+      - ./server_docker_log:/opt/bloodhound/log
       ports:
       - 8080:8080/tcp
       environment:
@@ -20,7 +20,7 @@ services:
       networks:
       - default
       volumes:
-      - ./etc_client:/opt/afthem/etc
-      - ./client_docker_log:/opt/afthem/log
+      - ./etc_client:/opt/bloodhound/etc
+      - ./client_docker_log:/opt/bloodhound/log
       environment:
       - memorySettings=-Xms1024m -Xmx1024m

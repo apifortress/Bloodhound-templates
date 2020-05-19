@@ -4,8 +4,8 @@ services:
       image: apifortress/bloodhound:latest
       container_name: bloodhound
       volumes:
-      - ./etc:/opt/afthem/etc
-      - ./docker_log:/opt/afthem/log
+      - ./etc:/opt/bloodhound/etc
+      - ./docker_log:/opt/bloodhound/log
       environment:
       - memorySettings=-Xms1024m -Xmx1024m
    tinyproxy:
