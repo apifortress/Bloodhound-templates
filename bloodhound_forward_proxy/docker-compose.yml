@@ -1,6 +1,6 @@
 version: '2'
 services:
-   afthem:
+   bloodhound:
       image: apifortress/bloodhound:latest
       container_name: bloodhound
       volumes:
@@ -11,7 +11,7 @@ services:
    tinyproxy:
       image: dannydirect/tinyproxy:latest
       links:
-      - afthem:postman-echo.com
+      - bloodhound:postman-echo.com
       volumes:
       - ./tinyproxy:/etc/tinyproxy
       ports:

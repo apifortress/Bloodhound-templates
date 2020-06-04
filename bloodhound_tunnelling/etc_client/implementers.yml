@@ -22,5 +22,5 @@ ingresses:
     thread_pool: default
     config: 
       name: bananas
-      server: afthem_server
+      server: bloodhound_server
       

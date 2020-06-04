@@ -1,6 +1,6 @@
 version: '2'
 services:
-   afthem:
+   bloodhound:
       image: apifortress/bloodhound:latest
       container_name: bloodhound
       networks:
