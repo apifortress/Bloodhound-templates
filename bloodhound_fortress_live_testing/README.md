@@ -33,7 +33,7 @@ regex:
 ```
 
 Which means: *apply the `product_api` label whenever the URL ends with `product` and the method is `GET`*.
-The `endpoint_identifier` actor is described on [GitHub](https://github.com/apifortress/bloodhound/blob/master/doc/07_advanced_actors.md).
+The `endpoint_identifier` actor is described on [GitHub](https://github.com/apifortress/bloodhound/blob/master/doc/06_advanced_actors.md).
 
 The label is then used in by the `fortress_live_testing` module:
 
