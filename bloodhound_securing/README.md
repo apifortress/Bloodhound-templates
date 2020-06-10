@@ -2,7 +2,7 @@
 
 In this example we show a complete example on how to add basic security to an API, by applying both an API key filtering system, and a basic authentication actor.
 
-More information about the actors can be found in the [Advanced Actors documentation](https://github.com/apifortress/bloodhound/blob/master/doc/07_advanced_actors.md).
+More information about the actors can be found in the [Advanced Actors documentation](https://github.com/apifortress/bloodhound/blob/master/doc/06_advanced_actors.md).
 
 ## Usage
 
